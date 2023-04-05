@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="estados_gestacion">
+        <item>P.P</item>
+        <item>30 Días</item>
+        <item>45 Días</item>
+        <item>2M</item>
+        <item>3M</item>
+        <item>4M</item>
+        <item>5M</item>
+        <item>6M</item>
+        <item>7M</item>
+        <item>8M</item>
+        <item>Próxima</item>
+    </string-array>
+
+</resources>

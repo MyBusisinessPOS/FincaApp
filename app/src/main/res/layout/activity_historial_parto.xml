@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/parent_view"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/main_bg"
+tools:context=".ui.HistorialPartoActivity">
+<androidx.cardview.widget.CardView
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:theme="@style/ThemeOverlay.MaterialComponents.Light"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="5dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <ImageView
+        android:id="@+id/img_close_documents"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center_vertical"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:scaleType="centerInside"
+        android:src="@drawable/baseline_arrow_back"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Light">
+
+    </ImageView>
+</androidx.cardview.widget.CardView>
+
+<com.google.android.material.appbar.AppBarLayout
+    android:id="@+id/app_bar"
+    style="@style/NoAppBarElevation"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="0dp"
+    android:theme="@style/AppTheme.AppBarOverlay"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_registro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primaryColorDark"
+        android:minHeight="?android:attr/actionBarSize">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Historial de parto"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+</com.google.android.material.appbar.AppBarLayout>
+
+
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/recyclerView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="65dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/app_bar"
+    tools:listitem="@layout/item_partos">
+</androidx.recyclerview.widget.RecyclerView>
+
+
+<com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:id="@+id/fb_agrega_parto"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:tint="@color/white"
+    android:src="@drawable/baseline_add_white"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
+
+</com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
