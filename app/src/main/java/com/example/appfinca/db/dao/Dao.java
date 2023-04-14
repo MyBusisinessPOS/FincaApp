@@ -51,6 +51,10 @@ public class Dao {
                 dao =daoSession.getPartoBeanDao();
                 break;
 
+            case "UsuarioBean":
+                dao =daoSession.getUsuarioBeanDao();
+                break;
+
         }
     }
 

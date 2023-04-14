@@ -19,6 +19,13 @@ public class LecheDao extends Dao{
     }
 
 
+    final public LecheBean animal(Long codigo) {
+        final List<LecheBean> usuarioBeans =dao.queryBuilder()
+                .where(LecheBeanDao.Properties.InventarioId.eq(codigo))
+                .list();
+        return usuarioBeans.size()>0?usuarioBeans.get(0):null;
+    }
+
 
 
 }

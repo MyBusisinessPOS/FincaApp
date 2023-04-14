@@ -17,6 +17,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import com.example.appfinca.Actividades;
 import com.example.appfinca.R;
@@ -41,7 +42,7 @@ public class HistorialPartoActivity extends AppCompatActivity implements Adapter
     private AdapterPartos adapterPartos;
     private List<PartoBean> mDataPartos;
     private RecyclerView recyclerViewPartos;
-
+    private ImageView img_close_documents_parto;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,6 +57,14 @@ public class HistorialPartoActivity extends AppCompatActivity implements Adapter
         });
         inianDatos();
         initRecyclerPartos();
+
+        img_close_documents_parto = findViewById(R.id.img_close_documents_parto);
+        img_close_documents_parto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     private void inianDatos() {

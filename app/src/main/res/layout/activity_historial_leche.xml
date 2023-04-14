@@ -23,7 +23,7 @@ tools:context=".ui.HistorialLecheActivity">
     app:layout_constraintTop_toTopOf="parent">
 
     <ImageView
-        android:id="@+id/img_close_documents"
+        android:id="@+id/img_close_documents_leche"
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:layout_gravity="center_vertical"

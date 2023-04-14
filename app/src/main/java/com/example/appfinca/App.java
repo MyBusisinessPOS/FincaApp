@@ -26,7 +26,7 @@ public class App extends Application {
         daoHelper = DBHelper.getSingleton();
 
         /** Inicia el Helper **/
-        daoHelper.init(_INSTANCE, "finca5_db");
+        daoHelper.init(_INSTANCE, "finca6_db");
 
     }
 }

@@ -17,6 +17,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import com.example.appfinca.Actividades;
 import com.example.appfinca.R;
@@ -48,7 +49,7 @@ public class HistorialLecheActivity extends AppCompatActivity implements Adapter
     private List<LecheBean> mDataLeche;
     private RecyclerView recyclerViewLeche;
     private FloatingActionButton fb_agrega_leche;
-
+    private ImageView img_close_documents_leche;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,6 +63,14 @@ public class HistorialLecheActivity extends AppCompatActivity implements Adapter
         });
         inianDatos();
         initRecyclerLeche();
+
+        img_close_documents_leche = findViewById(R.id.img_close_documents_leche);
+        img_close_documents_leche.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     private void inianDatos(){

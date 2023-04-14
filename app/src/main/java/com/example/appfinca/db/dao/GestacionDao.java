@@ -2,10 +2,8 @@ package com.example.appfinca.db.dao;
 
 import com.example.appfinca.db.bean.GestacionBean;
 import com.example.appfinca.db.bean.GestacionBeanDao;
-import com.example.appfinca.db.bean.InventarioBean;
-import com.example.appfinca.db.bean.InventarioBeanDao;
-import com.example.appfinca.db.bean.PartoBean;
-import com.example.appfinca.db.bean.PartoBeanDao;
+import com.example.appfinca.db.bean.UsuarioBean;
+import com.example.appfinca.db.bean.UsuarioBeanDao;
 
 import java.util.List;
 
@@ -21,6 +19,14 @@ public class GestacionDao extends Dao{
         return dao.queryBuilder()
                 .where(GestacionBeanDao.Properties.IdInventario.eq(codigo))
                 .list();
+    }
+
+
+    final public GestacionBean animal(Long codigo) {
+        final List<GestacionBean> usuarioBeans =dao.queryBuilder()
+                .where(GestacionBeanDao.Properties.IdInventario.eq(codigo))
+                .list();
+        return usuarioBeans.size()>0?usuarioBeans.get(0):null;
     }
 
 }

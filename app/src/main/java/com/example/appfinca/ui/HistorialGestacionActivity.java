@@ -15,6 +15,7 @@ import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.ImageView;
 
 import com.example.appfinca.Actividades;
 import com.example.appfinca.R;
@@ -41,6 +42,8 @@ public class HistorialGestacionActivity extends AppCompatActivity implements Ada
     private RecyclerView recyclerViewGestacion;
     private String gestacionSeleccionada;
     private FloatingActionButton fb_agrega_gestacion;
+
+    private ImageView img_close_documents_gestacion;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,6 +59,14 @@ public class HistorialGestacionActivity extends AppCompatActivity implements Ada
 
         inianDatos();
         initRecyclerGestacion();
+
+        img_close_documents_gestacion = findViewById(R.id.img_close_documents_gestacion);
+        img_close_documents_gestacion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
 

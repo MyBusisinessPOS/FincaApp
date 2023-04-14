@@ -139,7 +139,6 @@ public class RegistroEspecieActivity extends AppCompatActivity {
                 Calendar now = Calendar.getInstance();
                 Calendar min = Calendar.getInstance();
                 min.add(Calendar.DAY_OF_YEAR, -2);
-
                 DatePickerDialog dialog = new DatePickerDialog(RegistroEspecieActivity.this, new DatePickerDialog.OnDateSetListener() {
 
                     @Override

@@ -8,4 +8,5 @@ public class LoteDao extends Dao{
 
 
 
+
 }

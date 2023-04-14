@@ -22,7 +22,7 @@ tools:context=".ui.HistorialPartoActivity">
     app:layout_constraintTop_toTopOf="parent">
 
     <ImageView
-        android:id="@+id/img_close_documents"
+        android:id="@+id/img_close_documents_parto"
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:layout_gravity="center_vertical"

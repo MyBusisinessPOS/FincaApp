@@ -45,6 +45,8 @@ public class HistorialPesoActivity extends AppCompatActivity implements AdapterP
 
     private FloatingActionButton fb_agrega_peso;
 
+    private ImageView img_close_documents_peso;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,6 +61,14 @@ public class HistorialPesoActivity extends AppCompatActivity implements AdapterP
         });
         inianDatos();
         initRecyclerPesos();
+
+        img_close_documents_peso = findViewById(R.id.img_close_documents_peso);
+        img_close_documents_peso.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     private void inianDatos() {
